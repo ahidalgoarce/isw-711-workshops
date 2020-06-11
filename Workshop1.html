@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://api.openbrewerydb.org/breweries?per_page=10", 
+                type: "GET",
+                success: function(result) {
+                    console.table(result);
+                    var myTable = '<table style="width:100%" border="1">';
+                    myTable += '<tr>';
+                    for( var j in result[0] ) {
+                        myTable += '<th>' + j + '</th>';
+                    }
+                    myTable += '</tr>';
+                    for( var i = 0; i < result.length; i++) {
+                        myTable += '<tr>';
+                    for( var j in result[i] ) {
+                        myTable += '<td align="center">' + result[i][j] + '</td>';
+                    }
+                    myTable += '</tr>';
+                    }
+                    myTable += '</table>';
+                    document.getElementById('container').innerHTML = myTable;
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+                
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
