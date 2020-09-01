@@ -1,0 +1,23 @@
+{
+  "name": "workshop3",
+  "version": "1.0.0",
+  "description": "local session",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahidalgoarce/isw-711-workshops.git"
+  },
+  "author": "Alejandro Hidalgo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahidalgoarce/isw-711-workshops/issues"
+  },
+  "homepage": "https://github.com/ahidalgoarce/isw-711-workshops#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.17.1"
+  }
+}
